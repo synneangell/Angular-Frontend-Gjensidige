@@ -1,0 +1,26 @@
+<h3>Opprett ny kunde</h3>
+<div [hidden]="submitted" style="width: 500px;">
+  <form [formGroup]="opprettKundeSkjema" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="fornavn">Fornavn</label>
+      <input type="text" class="form-control" formControlName="fornavn">
+    </div>
+
+    <div class="form-group">
+      <label for="etternavn">Etternavn</label>
+      <input type="text" class="form-control" formControlName="etternavn">
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="text" class="form-control" formControlName="email">
+    </div>
+
+    <button type="submit" class="btn btn-success" [disabled]="!opprettKundeSkjema.valid">Lagre</button>
+  </form>
+
+<div [hidden]="!submitted">
+  <h4>Kunde er opprettet!</h4>
+</div>
+
+</div>

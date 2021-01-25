@@ -1,0 +1,22 @@
+<h2> Alle kunder </h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+          <th>Fornavn</th>
+          <th>Etternavn</th>
+          <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let kunde of kunder">
+        <td>{{kunde.fornavn}}</td>
+        <td>{{kunde.etternavn}}</td>
+        <td>{{kunde.email}}</td>
+            <td>
+                <button (click) = "oppdaterKunde(kunde.id)" class = "btn btn-info"> Oppdater</button>
+                <button (click) = "slettKunde(kunde.id)" class = "btn btn-danger" style="margin-left: 10px"> Slett</button>
+                <button (click) = "kundeDetaljer(kunde.id)" class = "btn btn-info" style="margin-left: 10px"> Vis detaljer</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

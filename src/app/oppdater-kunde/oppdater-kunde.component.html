@@ -1,0 +1,21 @@
+<h3>Oppdater kunde</h3>
+<div style="width: 400px;">
+  <form *ngIf='oppdaterKundeSkjema' [formGroup]="oppdaterKundeSkjema" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="fornavn">Fornavn</label>
+      <input type="text" class="form-control" id="fornavn" formControlName="fornavn" [(ngModel)]="kunde.fornavn">
+    </div>
+
+    <div class="form-group">
+      <label for="etternavn">Etternavn</label>
+      <input type="text" class="form-control" id="etternavn" formControlName="etternavn" [(ngModel)]="kunde.etternavn">
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="text" class="form-control" id="email" formControlName="email" [(ngModel)]="kunde.email">
+    </div>
+
+    <button type="submit"  class="btn btn-primary">Lagre</button>
+  </form>
+</div>

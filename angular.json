@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "Angular-Frontend-Gjensidige"
+  "defaultProject": "Angular-Frontend-Gjensidige",
+  "cli": {
+    "analytics": false
+  }
 }

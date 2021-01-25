@@ -1,0 +1,18 @@
+<h2>Kundedetaljer</h2> 
+
+<hr/>
+<div *ngIf="kunde">
+  <div>
+    <label><b>Fornavn: </b></label> {{kunde.fornavn}}
+  </div>
+  <div>
+    <label><b>Etternavn: </b></label> {{kunde.etternavn}}
+  </div>
+  <div>
+    <label><b>Email: </b></label> {{kunde.email}}
+  </div>  
+</div>
+
+<br>
+<br>
+<button (click)="KundeListe()" class="btn btn-primary">Tilbake til liste over kunder</button><br>
